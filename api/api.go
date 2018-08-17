@@ -5,7 +5,7 @@ import (
 	"github.com/iot-bb/iot-bb-api/api/v1"
 )
 // API pakage
-func API() {
+func API() *gin.Engine {
 	router := gin.Default()
 	apiRouter := router.Group("/api")
 	apiv1 := apiRouter.Group("/v1")
