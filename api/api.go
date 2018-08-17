@@ -12,4 +12,5 @@ func API() *gin.Engine {
 	{
 		v1.Example(apiv1)
 	}
+	return router
 }
