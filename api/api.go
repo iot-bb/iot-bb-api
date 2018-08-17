@@ -7,8 +7,8 @@ import (
 // API pakage
 func API() *Engine {
 	router := gin.Default()
-	api := router.Group("/api")
-	apiv1 := api.Group("/v1")
+	apiRouter := router.Group("/api")
+	apiv1 := apiRouter.Group("/v1")
 	{
 		v1.Example(apiv1)
 	}
