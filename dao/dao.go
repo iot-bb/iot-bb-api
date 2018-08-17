@@ -1,5 +1,3 @@
-// This program provides a sample application for using MongoDB with
-// the mgo driver.
 package dao
 
 import (
@@ -11,6 +9,6 @@ import (
 func DAO() *mgo.Database {
   session, err := mgo.Dial(os.Getenv("MONGODB_URI"))
   print(err)
-  return session.DB(os.Getenv("MONGODB_URI"))
+  return session.DB(os.Getenv("MONGODB_NAME"))
 }
 

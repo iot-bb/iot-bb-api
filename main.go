@@ -1,16 +1,18 @@
 package main
 
 import (
-	"log"
 	"github.com/iot-bb/iot-bb-api/api"
 	"github.com/iot-bb/iot-bb-api/dao"
-	"github.com/iot-bb/iot-bb-api/models"
+	// "github.com/iot-bb/iot-bb-api/models"
 )
+// M map
+type M map[string]interface{}
 
 func main() {
 	router := api.API()
-	db := dao.Dao()
-	c = db.C("Test")
-	print(c)
+	db := dao.DAO()
+	c := db.C("Test")
+	c.Insert(M{"key": "value"})
+	print("==>", c.Create)
 	router.Run(":8080")
 }
