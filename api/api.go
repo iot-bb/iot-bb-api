@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/iot-bb/iot-bb-api/v1"
+	"github.com/iot-bb/iot-bb-api/api/v1"
 )
 // API pakage
 func API() {
