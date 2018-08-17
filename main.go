@@ -11,5 +11,6 @@ func main() {
 	router := api.API()
 	db := dao.Dao()
 	c = db.C("Test")
+	print(c)
 	router.Run(":8080")
 }
