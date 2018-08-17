@@ -3,11 +3,14 @@
 package dao
 
 import (
+  "os"
   "gopkg.in/mgo.v2"
 )
 
-function DAO() MongoDB{
+// DAO database connection
+func DAO() *mgo.Database {
   session, err := mgo.Dial(os.Getenv("MONGODB_URI"))
-  return session.DB(database)
+  print(err)
+  return session.DB(os.Getenv("MONGODB_URI"))
 }
 
